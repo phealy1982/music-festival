@@ -10,14 +10,14 @@ public class MusicFestivalTest {
     private MusicFestival musicFestival = new MusicFestival();
 
     @Test public void should_allow_band_to_be_booked() throws Exception {
-        musicFestival.bookBand("Guns N Roses");
-        assertThat(musicFestival.lineup()).contains("Guns N Roses");
+        musicFestival.bookBand(Band.Deftones);
+        assertThat(musicFestival.lineup()).contains(Band.Deftones);
     }
 
     @Test public void should_be_able_to_book_multiple_bands() throws Exception {
-        musicFestival.bookBand("Guns N Roses");
-        musicFestival.bookBand("Deftones");
+        musicFestival.bookBand(Band.Guns_N_Roses);
+        musicFestival.bookBand(Band.Deftones);
 
-        assertThat(musicFestival.lineup()).contains("Guns N Roses", "Deftones");
+        assertThat(musicFestival.lineup()).contains(Band.Deftones, Band.Guns_N_Roses);
     }
 }

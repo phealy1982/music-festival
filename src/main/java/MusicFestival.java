@@ -5,13 +5,13 @@ import java.util.List;
  * Created by peterhealy on 29/09/2016.
  */
 public class MusicFestival {
-    private static final List<String> bands = new ArrayList<String>();
+    private static final List<Band> bands = new ArrayList<Band>();
 
-    public void bookBand(String band) {
+    public void bookBand(Band band) {
         bands.add(band);
     }
 
-    public List<String> lineup() {
+    public List<Band> lineup() {
         return bands;
     }
 }
